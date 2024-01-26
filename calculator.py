@@ -1,31 +1,27 @@
-import math
+def add(a, b):
+    return a + b
 
-class Calculator:
-    def f_add(self, alpha, beta):
-        return alpha + beta
+def subtract(a, b):
+    return a - b
 
-    def f_subtract(self, alpha, beta):
-        return alpha - beta
+if __name__ == '__main__':
+    while True:
+        print("Simple Calculator")
+        print("1. Add")
+        print("2. Subtract")
+        print("3. Exit")
+        choice = input("Enter choice(1/2/3): ")
 
-    def f_multiply(self, alpha, beta):
-        return alpha * beta
+        if choice in ('1', '2', '3'):
+            if choice == '3':
+                print("Exiting...")
+                break
+            num1 = int(input("Enter first number: "))
+            num2 = int(input("Enter second number: "))
 
-    def f_divide(self, alpha, beta):
-        if beta != 0:
-            return alpha / beta
+            if choice == '1':
+                print("Result: ", add(num1, num2))
+            elif choice == '2':
+                print("Result: ", subtract(num1, num2))
         else:
-            raise ValueError('Cannot divide by zero.')
-
-    def f_square_root(self, alpha):
-        if alpha >= 0:
-            return math.sqrt(alpha)
-        else:
-            raise ValueError('Cannot calculate the square root of a negative number.')
-
-# Example usage:
-# calc = Calculator()
-# result_addition = calc.f_add(10, 5)
-# result_subtraction = calc.f_subtract(10, 5)
-# result_multiplication = calc.f_multiply(10, 5)
-# result_division = calc.f_divide(10, 5)
-# result_square_root = calc.f_square_root(25)
+            print("Invalid Input")
