@@ -8,9 +8,9 @@ class f_GUI_Calculator:
         f_self.main_window = tk.Tk()
         f_self.main_window.title('Calculator')
 
-        f_self.create_widgets()
+        f_self.f_create_widgets()
 
-    def create_widgets(f_self):
+    def f_create_widgets(f_self):
         f_self.buttons_frame = tk.Frame(f_self.main_window)
         f_self.buttons_frame.grid(row=0, column=0, sticky='nsew')
 
